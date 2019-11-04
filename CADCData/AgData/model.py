@@ -29,6 +29,9 @@ clf.fit(train_x, train_y)
 
 print("score: " + str(clf.score(test_x, test_y)))
 
+for param in clf.best_params_:
+    print(clf.best_params_[param])
+
 predictions = clf.predict(test_x)
 pred_df = test
 pred_df["Predicted Yield per Acre"] = predictions
